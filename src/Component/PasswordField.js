@@ -13,7 +13,7 @@ const PasswordField = props => {
     }
     return (
         <React.Fragment>
-            <input type="text"
+            <input type="text" 
                 name={props.name}
                 value={password}
                 onChange={event => setPasswordValue(event)}

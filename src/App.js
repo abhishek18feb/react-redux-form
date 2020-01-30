@@ -1,17 +1,20 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Register from './Pages/Register';
-import { Values } from "redux-form-website-template";
+import ContactForm from './Pages/Register';
+import { connect } from 'react-redux'
+//import { Values } from "redux-form-website-template";
+import './App.scss';
 
 function App() {
-  const handleSubmit = values => {
-    window.alert(`You submitted:\n\n${JSON.stringify(values, null, 2)}`);
+  const submit = values => {
+    // print the form values to the console
+    console.log(values)
   }
   return (
     <div className="App">
-      <Register />
-      <Values form="contact" onSubmit={handleSubmit} />
+     <ContactForm onSubmit={submit} />
+      
     </div>
   );
 }

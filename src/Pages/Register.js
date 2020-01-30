@@ -1,6 +1,7 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
 import PasswordField from '../Component/PasswordField';
+import TextField from '../Component/TextField';
 
 let ContactForm = props => {
     // const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
@@ -13,7 +14,7 @@ let ContactForm = props => {
                 <div>
                     <Field
                         name="firstName"
-                        component="input"
+                        component={TextField}
                         type="text"
                         placeholder="First Name"
                     />
@@ -24,7 +25,18 @@ let ContactForm = props => {
                 <div>
                     <Field
                         name="lastName"
-                        component="input"
+                        component={TextField}
+                        type="text"
+                        placeholder="Last Name"
+                    />
+                </div>
+            </div>
+            <div>
+                <label>Username Name</label>
+                <div>
+                    <Field
+                        name="username"
+                        component={TextField}
                         type="text"
                         placeholder="Last Name"
                     />
@@ -55,7 +67,8 @@ let ContactForm = props => {
 
 ContactForm = reduxForm({
     // a unique name for the form
-    form: 'contact'
+    form: 'contact',
+    asyncBlurFields: ['password'],
 })(ContactForm)
 
 export default ContactForm
