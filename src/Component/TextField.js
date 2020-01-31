@@ -6,6 +6,7 @@ const PasswordField = props => {
         <React.Fragment>
             <input type="text" 
                 name={props.name}
+                normalize={props.normalize}
             />
         </React.Fragment>
     )

@@ -6,10 +6,12 @@ import * as serviceWorker from './serviceWorker';
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import { reducer as formReducer } from 'redux-form';
+import trimUnameReducer from './sotre/reducer/trimUname'; 
 
 
 const rootReducer = combineReducers({
-    form: formReducer
+    form: formReducer,
+    trimUanme:trimUnameReducer
 });
 
 const store = createStore(rootReducer);

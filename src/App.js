@@ -4,6 +4,8 @@ import './App.css';
 import ContactForm from './Pages/Register';
 import { connect } from 'react-redux'
 //import { Values } from "redux-form-website-template";
+import FieldNormalizingForm from './Pages/FieldNormalizingForm';
+import FacebookLogin from './Pages/FacebookLogin';
 import './App.scss';
 
 function App() {
@@ -13,8 +15,8 @@ function App() {
   }
   return (
     <div className="App">
-     <ContactForm onSubmit={submit} />
-      
+     <FieldNormalizingForm />
+      <FacebookLogin />
     </div>
   );
 }

@@ -17,7 +17,7 @@ const PasswordField = props => {
                 name={props.name}
                 value={password}
                 onChange={event => setPasswordValue(event)}
-                onBlur={event => hideTooltip(event)}
+                //onBlur={event => hideTooltip(event)}
             />
             <div className="tooltip" style={{ display: disp }}>
                 {password}
